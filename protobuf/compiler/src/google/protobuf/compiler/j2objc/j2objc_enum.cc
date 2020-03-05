@@ -123,7 +123,8 @@ void EnumGenerator::GenerateHeader(io::Printer* printer) {
       "FOUNDATION_EXPORT $classname$ *$classname$_forNumberWithInt_("
       "jint value);\n"
       "FOUNDATION_EXPORT $classname$ *$classname$_fromOrdinal("
-      "NSUInteger ordinal);\n\n",
+      "NSUInteger ordinal);\n"
+      "J2OBJC_CLASS_DECLARATION($classname$);\n\n",
       "classname", ClassName(descriptor_));
 
   for (int i = 0; i < canonical_values_.size(); i++) {
